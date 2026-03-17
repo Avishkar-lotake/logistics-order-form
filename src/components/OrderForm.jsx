@@ -23,13 +23,16 @@ export function OrderForm({ value, onChange }) {
 
           <label className={styles.field}>
             <span className={styles.label}>Shipment date</span>
-            <input
-              className={styles.input}
-              type="date"
-              value={value.shipmentDate}
-              onChange={(e) => set("shipmentDate", e.target.value)}
-              max={new Date().toISOString().split('T')[0]}
-            />
+            <div className={styles.dateInputWrapper}>
+              <input
+                type="date"
+                className={styles.input}
+                value={value.shipmentDate || ""}
+                min={new Date().toISOString().split('T')[0]}
+                max={new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toISOString().split('T')[0]}
+                onChange={(e) => set("shipmentDate", e.target.value)}
+              />
+            </div>
           </label>
 
           <label className={styles.field}>

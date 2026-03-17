@@ -150,6 +150,57 @@
   box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
 }
 
+/* Ensure date input shows calendar picker */
+.input[type="date"] {
+  cursor: pointer;
+  position: relative;
+}
+
+.input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: 1;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  color: #2563eb;
+}
+
+.input[type="date"]::-webkit-inner-spin-button,
+.input[type="date"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox date picker styling */
+.input[type="date"]::-moz-focus-inner {
+  border: 0;
+}
+
+.input[type="date"]::-moz-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: 1;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  color: #2563eb;
+}
+
+.dateInputWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.dateInputWrapper::after {
+  content: "📅";
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 16px;
+  opacity: 0.6;
+}
+
 .actions {
   margin-top: 14px;
   display: flex;

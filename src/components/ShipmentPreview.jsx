@@ -120,8 +120,8 @@ function KV({
   value,
   placeholder
 }) {
-  const display = value.trim() ? value : placeholder;
-  const muted = !value.trim();
+  const display = value && value.toString().trim() ? value : placeholder;
+  const muted = !value || !value.toString().trim();
 
   return (
     <div className={styles.kv}>
@@ -155,20 +155,14 @@ function formatDims(l, w, h) {
 }
 
 function formatDisplayDate(dateString) {
-  if (!dateString.trim()) return "—";
-  
-  try {
-    const date = new Date(dateString);
-    if (isNaN(date.getTime())) return dateString;
-    
-    return date.toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'short',
-      day: 'numeric'
-    });
-  } catch {
-    return dateString;
-  }
+  if (!dateString) return "";
+  const date = new Date(dateString);
+  if (isNaN(date.getTime())) return "";
+  return date.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "short",
+    day: "numeric"
+  });
 }
 
 function formatAddress(p) {
