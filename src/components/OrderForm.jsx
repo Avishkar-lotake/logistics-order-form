@@ -28,6 +28,7 @@ export function OrderForm({ value, onChange }) {
               type="date"
               value={value.shipmentDate}
               onChange={(e) => set("shipmentDate", e.target.value)}
+              max={new Date().toISOString().split('T')[0]}
             />
           </label>
 

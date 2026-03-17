@@ -67,15 +67,11 @@ jspm_packages/
 .cache
 .parcel-cache
 
-# Next.js build output
-.next
-
 # Nuxt.js build / generate output
 .nuxt
 
 # Storybook build outputs
 .out
-.storybook-out
 
 # Temporary folders
 tmp/
@@ -87,8 +83,12 @@ temp/
 .idea
 .DS_Store
 *.suo
+
+# Next.js build output - NEVER ALLOW THIS FOLDER
+.next/
+.next/**
+
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
-

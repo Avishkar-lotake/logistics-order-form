@@ -35,7 +35,7 @@ export function ShipmentPreview({ draft }) {
           <div className={styles.sectionTitle}>Shipment</div>
           <div className={styles.kvGrid}>
             <KV label="Order ID" value={draft.orderId} placeholder="—" />
-            <KV label="Shipment date" value={draft.shipmentDate} placeholder="—" />
+            <KV label="Shipment date" value={formatDisplayDate(draft.shipmentDate)} placeholder="—" />
             <KV label="Delivery type" value={draft.deliveryType} placeholder="—" />
           </div>
         </div>
@@ -152,6 +152,23 @@ function formatCurrency(n) {
 function formatDims(l, w, h) {
   const hasAny = l.trim() || w.trim() || h.trim();
   return hasAny ? `${l || "—"} × ${w || "—"} × ${h || "—"}` : "";
+}
+
+function formatDisplayDate(dateString) {
+  if (!dateString.trim()) return "—";
+  
+  try {
+    const date = new Date(dateString);
+    if (isNaN(date.getTime())) return dateString;
+    
+    return date.toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric'
+    });
+  } catch {
+    return dateString;
+  }
 }
 
 function formatAddress(p) {

@@ -236,5 +236,85 @@
   .packageGrid {
     grid-template-columns: 1fr;
   }
+
+  .cardHeader {
+    padding: 12px 12px 8px;
+  }
+
+  .cardTitle {
+    font-size: 15px;
+  }
+
+  .cardSubtitle {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 640px) {
+  .body {
+    padding: 12px;
+  }
+
+  .section {
+    margin-bottom: 16px;
+  }
+
+  .cardTitle {
+    font-size: 14px;
+  }
+
+  .cardSubtitle {
+    font-size: 11px;
+  }
+
+  .packageCard {
+    padding: 12px;
+  }
+
+  .packageTitle {
+    font-size: 13px;
+  }
+
+  .packageMeta {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .body {
+    padding: 8px;
+  }
+
+  .section {
+    margin-bottom: 12px;
+  }
+
+  .cardTitle {
+    font-size: 13px;
+  }
+
+  .cardSubtitle {
+    font-size: 10px;
+  }
+
+  .packageCard {
+    padding: 8px;
+  }
+
+  .packageTitle {
+    font-size: 12px;
+  }
+
+  .packageMeta {
+    font-size: 11px;
+  }
+
+  .kvLabel {
+    font-size: 12px;
+  }
+
+  .kvValue {
+    font-size: 13px;
+  }
 }
 

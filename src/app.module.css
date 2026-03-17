@@ -8,10 +8,10 @@
   color: #0f172a;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica,
     Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  overflow-x: hidden;
 }
 
 .header {
-  max-width: 1120px;
   margin: 0 auto 18px;
   padding: 4px 2px;
 }
@@ -31,12 +31,12 @@
 }
 
 .grid {
-  max-width: 1120px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
   gap: 18px;
   align-items: start;
+  width: 100%;
 }
 
 .panel {
@@ -66,6 +66,50 @@
   .panelRight {
     position: static;
     top: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .shell {
+    padding: 12px;
+  }
+
+  .grid {
+    gap: 12px;
+  }
+
+  .header {
+    margin: 0 auto 12px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .subtitle {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .shell {
+    padding: 8px;
+  }
+
+  .grid {
+    gap: 10px;
+  }
+
+  .header {
+    margin: 0 auto 8px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .subtitle {
+    font-size: 12px;
   }
 }
 
