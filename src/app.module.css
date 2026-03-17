@@ -1,0 +1,85 @@
+.shell {
+  min-height: 100vh;
+  padding: 28px;
+  background:
+    radial-gradient(1000px 600px at 15% 0%, rgba(37, 99, 235, 0.10), transparent 55%),
+    radial-gradient(900px 520px at 95% 10%, rgba(14, 165, 233, 0.10), transparent 60%),
+    linear-gradient(180deg, #f8fafc 0%, #f6f7fb 40%, #f3f4f6 100%);
+  color: #0f172a;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica,
+    Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+.header {
+  max-width: 1120px;
+  margin: 0 auto 18px;
+  padding: 4px 2px;
+}
+
+.title {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  margin: 6px 0 0;
+  color: #475569;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.grid {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.panel {
+  min-width: 0;
+}
+
+.panelLeft {
+  min-width: 0;
+}
+
+.panelRight {
+  min-width: 0;
+  position: sticky;
+  top: 18px;
+}
+
+@media (max-width: 860px) {
+  .shell {
+    padding: 16px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .panelRight {
+    position: static;
+    top: auto;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 861px) {
+  .shell {
+    padding: 18px;
+  }
+
+  .grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .panelRight {
+    top: 12px;
+  }
+}
