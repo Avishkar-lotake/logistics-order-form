@@ -44,16 +44,7 @@ npm run build
 2. Connect your repository to [Vercel](https://vercel.com)
 3. Vercel will automatically detect the Vite configuration and deploy
 
-### Netlify
-1. Push your code to GitHub
-2. Connect your repository to [Netlify](https://netlify.com)
-3. Use these build settings:
-   - **Build command**: `npm run build`
-   - **Publish directory**: `dist`
 
-### Manual Deployment
-1. Build the project: `npm run build`
-2. Upload the `dist` folder to your hosting service
 
 ## Project Structure
 
@@ -102,5 +93,4 @@ src/
 ## Configuration Files
 
 - `vercel.json` - Vercel deployment configuration
-- `netlify.toml` - Netlify deployment configuration
 - `vite.config.js` - Vite build configuration
